@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cat on Board | $BOARDCAT</title>
+    <meta
+      name="description"
+      content="Cat on Board brings captain-level cat energy, wild meme adventures, and unstoppable Solana vibes aboard the blockchain."
+    />
+    <link rel="icon" href="logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              fur: "#FF8C1F",
+              cap: "#3DDC4E",
+              sky: "#2F6BFF",
+              limeglow: "#D6FF4A",
+              ink: "#07111F",
+              cream: "#FFF6EA",
+            },
+            fontFamily: {
+              display: ["Lilita One", "system-ui", "sans-serif"],
+              body: ["Nunito", "system-ui", "sans-serif"],
+            },
+            boxShadow: {
+              fur: "0 12px 40px rgba(255, 140, 31, 0.35)",
+              cap: "0 12px 40px rgba(61, 220, 78, 0.28)",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+
+      body {
+        background-color: #07111f;
+        background-image: url("banner.jpg");
+        background-size: cover;
+        background-position: center top;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+      }
+
+      .marquee-track {
+        animation: marquee 28s linear infinite;
+      }
+
+      .floaty {
+        animation: floaty 4.5s ease-in-out infinite;
+      }
+
+      .hologram {
+        background-size: 220% 220%;
+        animation: borderflow 7s linear infinite;
+      }
+
+      @keyframes marquee {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-50%);
+        }
+      }
+
+      @keyframes floaty {
+        0%,
+        100% {
+          transform: translateY(0) rotate(-6deg);
+        }
+        50% {
+          transform: translateY(-10px) rotate(-3deg);
+        }
+      }
+
+      @keyframes borderflow {
+        0% {
+          background-position: 0% 50%;
+        }
+        100% {
+          background-position: 200% 50%;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .marquee-track,
+        .floaty,
+        .hologram {
+          animation: none;
+        }
+      }
+    </style>
+  </head>
+  <body class="font-body text-cream antialiased">
+    <div
+      class="pointer-events-none fixed inset-0 -z-10 bg-gradient-to-b from-ink/20 via-ink/5 to-ink/85"
+    ></div>
+
+    <header
+      class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-ink/45 backdrop-blur-md"
+    >
+      <div class="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3">
+        <a href="#top" class="flex items-center gap-3">
+          <img
+            src="logo.png"
+            alt="Cat on Board logo"
+            class="h-11 w-11 rounded-2xl object-cover ring-2 ring-limeglow/80"
+          />
+          <span class="leading-none">
+            <span class="block font-display text-lg tracking-wide text-cream">Cat on Board</span>
+            <span class="block text-xs font-extrabold uppercase tracking-[0.22em] text-limeglow"
+              >$BOARDCAT</span
+            >
+          </span>
+        </a>
+
+        <nav class="hidden items-center gap-6 text-sm font-extrabold uppercase tracking-wider md:flex">
+          <a href="#voyage" class="text-cream/80 transition hover:text-limeglow">Voyage</a>
+          <a href="#how-to-buy" class="text-cream/80 transition hover:text-limeglow">How to Buy</a>
+          <a href="#chart" class="text-cream/80 transition hover:text-limeglow">Chart</a>
+        </nav>
+
+        <div class="flex items-center gap-2">
+          <a
+            href="https://t.me/BOARDCAT"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Telegram"
+            class="grid h-11 w-11 place-items-center overflow-hidden rounded-xl bg-black ring-2 ring-transparent transition hover:ring-limeglow"
+          >
+            <img
+              src="tg.png"
+              alt=""
+              class="h-full w-full object-cover"
+              onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Crect width=%2264%22 height=%2264%22 fill=%22%23000%22/%3E%3Cpath fill=%22%23fff%22 d=%22M48.8 14.6 11.4 29.2c-2.2.9-2.1 2.1-.4 2.6l9.6 3 2.2 7.1c.4 1.1.2 1.5 1.3 1.5.7 0 1-.3 1.4-.7l3.6-3.5 7.4 5.5c1.4.8 2.4.4 2.8-1.3l5.2-24.4c.5-2-.7-2.9-2.7-2.4zM26.2 36.2l-.6 6.1-2.3-6.8 18.2-13.4z%22/%3E%3C/svg%3E'"
+            />
+          </a>
+          <a
+            href="https://x.com/CatonBoardX"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="X"
+            class="grid h-11 w-11 place-items-center overflow-hidden rounded-xl bg-black ring-2 ring-transparent transition hover:ring-fur"
+          >
+            <img src="x.png" alt="" class="h-full w-full object-cover" />
+          </a>
+          <a
+            href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=TBA"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hidden rounded-xl bg-fur px-4 py-2.5 font-display text-lg tracking-wide text-ink shadow-fur transition hover:-translate-y-0.5 hover:bg-[#ff9d3d] sm:inline-flex"
+            >Buy Now</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="top" class="flex min-h-[100svh] flex-col justify-end px-4 pb-8 pt-28">
+        <div class="mx-auto w-full max-w-6xl">
+          <div class="relative">
+            <img
+              src="logo.png"
+              alt="Captain cat surfing a keyboard"
+              class="floaty absolute -top-16 left-4 z-10 hidden h-32 w-32 rounded-[1.6rem] object-cover shadow-fur ring-4 ring-limeglow sm:block md:left-8 md:h-36 md:w-36"
+            />
+
+            <div
+              class="rounded-[2rem] border border-white/15 bg-ink/60 p-5 shadow-2xl backdrop-blur-md sm:p-8 sm:pt-10 md:pl-52"
+            >
+              <div class="flex flex-wrap items-center gap-2">
+                <span
+                  class="rounded-full bg-cap px-3 py-1 text-xs font-extrabold uppercase tracking-[0.18em] text-ink"
+                  >All aboard</span
+                >
+                <span
+                  class="rounded-full border border-fur/50 bg-fur/15 px-3 py-1 text-xs font-extrabold uppercase tracking-[0.18em] text-fur"
+                  >Solana meme</span
+                >
+              </div>
+
+              <h1 class="mt-4 font-display text-5xl leading-none text-cream sm:text-7xl">
+                Cat on Board
+              </h1>
+              <p class="mt-2 font-display text-3xl tracking-wide text-limeglow sm:text-4xl">$BOARDCAT</p>
+              <p class="mt-4 max-w-2xl text-base font-bold leading-relaxed text-cream/90 sm:text-lg">
+                Cat on Board brings captain-level cat energy, wild meme adventures, and unstoppable
+                Solana vibes aboard the blockchain.
+              </p>
+
+              <div class="mt-6 rounded-[1.4rem] bg-gradient-to-r from-fur via-limeglow to-sky p-[2px] hologram">
+                <div class="rounded-[1.3rem] bg-[#0b1730]/95 p-4 sm:p-5">
+                  <div class="flex flex-wrap items-start justify-between gap-3">
+                    <div>
+                      <p class="text-[11px] font-extrabold uppercase tracking-[0.28em] text-limeglow">
+                        Boarding pass
+                      </p>
+                      <p class="font-display text-2xl text-cream">Flight $BOARDCAT</p>
+                    </div>
+                    <p
+                      class="-rotate-6 rounded-lg border-2 border-fur px-2 py-1 font-display text-sm uppercase tracking-widest text-fur"
+                    >
+                      Captain
+                    </p>
+                  </div>
+
+                  <dl class="mt-4 grid grid-cols-2 gap-3 text-sm sm:grid-cols-4">
+                    <div>
+                      <dt class="text-[11px] font-extrabold uppercase tracking-widest text-cream/50">From</dt>
+                      <dd class="font-extrabold text-cream">Earth</dd>
+                    </div>
+                    <div>
+                      <dt class="text-[11px] font-extrabold uppercase tracking-widest text-cream/50">To</dt>
+                      <dd class="font-extrabold text-cream">Solana</dd>
+                    </div>
+                    <div>
+                      <dt class="text-[11px] font-extrabold uppercase tracking-widest text-cream/50">Gate</dt>
+                      <dd class="font-extrabold text-cream">Pump.fun</dd>
+                    </div>
+                    <div>
+                      <dt class="text-[11px] font-extrabold uppercase tracking-widest text-cream/50">Seat</dt>
+                      <dd class="font-extrabold text-cream">1A</dd>
+                    </div>
+                  </dl>
+
+                  <div
+                    class="mt-4 flex flex-col gap-3 rounded-2xl border border-dashed border-limeglow/40 bg-black/30 p-3 sm:flex-row sm:items-center sm:justify-between"
+                  >
+                    <div class="min-w-0">
+                      <p class="text-[11px] font-extrabold uppercase tracking-[0.22em] text-cream/50">
+                        Contract address
+                      </p>
+                      <p id="ca-display" class="truncate font-mono text-lg font-extrabold text-limeglow">TBA</p>
+                    </div>
+                    <button
+                      type="button"
+                      data-copy
+                      class="shrink-0 rounded-xl bg-limeglow px-4 py-2.5 font-display text-lg tracking-wide text-ink transition hover:bg-cap"
+                    >
+                      Copy CA
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-5 flex flex-wrap items-center gap-3">
+                <a
+                  href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=TBA"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="rounded-2xl bg-fur px-6 py-3 font-display text-2xl tracking-wide text-ink shadow-fur transition hover:-translate-y-0.5 hover:bg-[#ff9d3d]"
+                  >Buy Now</a
+                >
+                <a
+                  href="https://dexscreener.com/solana/TBA"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="rounded-2xl border-2 border-limeglow bg-ink/50 px-6 py-3 font-display text-2xl tracking-wide text-limeglow transition hover:-translate-y-0.5 hover:bg-limeglow hover:text-ink"
+                  >Chart</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="overflow-hidden border-y border-limeglow/25 bg-ink/75 py-3 backdrop-blur-sm">
+        <div class="marquee-track flex w-max">
+          <ul class="flex items-center gap-8 pr-8 font-display text-xl tracking-wide">
+            <li class="text-fur">$BOARDCAT</li>
+            <li class="text-limeglow">All Aboard</li>
+            <li class="text-cream">Captain Energy</li>
+            <li class="text-cap">Meme Adventures</li>
+            <li class="text-sky">Solana Vibes</li>
+            <li class="text-fur">Paws on the Keys</li>
+            <li class="text-limeglow">Keyboard Surf</li>
+            <li class="text-cream">Cat on Board</li>
+          </ul>
+          <ul class="flex items-center gap-8 pr-8 font-display text-xl tracking-wide" aria-hidden="true">
+            <li class="text-fur">$BOARDCAT</li>
+            <li class="text-limeglow">All Aboard</li>
+            <li class="text-cream">Captain Energy</li>
+            <li class="text-cap">Meme Adventures</li>
+            <li class="text-sky">Solana Vibes</li>
+            <li class="text-fur">Paws on the Keys</li>
+            <li class="text-limeglow">Keyboard Surf</li>
+            <li class="text-cream">Cat on Board</li>
+          </ul>
+        </div>
+      </div>
+
+      <section id="voyage" class="px-4 py-16 sm:py-20">
+        <div class="mx-auto max-w-6xl">
+          <p class="text-xs font-extrabold uppercase tracking-[0.28em] text-limeglow">The voyage</p>
+          <h2 class="mt-2 max-w-3xl font-display text-4xl leading-tight text-cream sm:text-5xl">
+            Captain cat. Wild memes. Solana at full speed.
+          </h2>
+          <div class="mt-8 grid gap-4 md:grid-cols-3">
+            <article class="rounded-[1.6rem] border border-fur/30 bg-ink/70 p-6 backdrop-blur-md">
+              <p class="font-display text-5xl text-fur">01</p>
+              <h3 class="mt-3 font-display text-2xl text-cream">Captain-level cat energy</h3>
+              <p class="mt-2 font-bold leading-relaxed text-cream/75">
+                Green cap on, sneakers locked, keyboard for a board. $BOARDCAT rides point and keeps
+                the whole ship loud.
+              </p>
+            </article>
+            <article class="rounded-[1.6rem] border border-cap/30 bg-ink/70 p-6 backdrop-blur-md">
+              <p class="font-display text-5xl text-cap">02</p>
+              <h3 class="mt-3 font-display text-2xl text-cream">Wild meme adventures</h3>
+              <p class="mt-2 font-bold leading-relaxed text-cream/75">
+                Every stop is a new bit. Chaos, stickers, and a captain who treats the timeline like
+                open sky.
+              </p>
+            </article>
+            <article class="rounded-[1.6rem] border border-sky/40 bg-ink/70 p-6 backdrop-blur-md">
+              <p class="font-display text-5xl text-sky">03</p>
+              <h3 class="mt-3 font-display text-2xl text-cream">Unstoppable Solana vibes</h3>
+              <p class="mt-2 font-bold leading-relaxed text-cream/75">
+                Fast lanes, neon cities, and a boarding call that does not clock out. The chain is
+                the ocean. The cat is already airborne.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="how-to-buy" class="px-4 pb-16 sm:pb-20">
+        <div class="mx-auto max-w-6xl rounded-[2rem] border border-white/10 bg-ink/75 p-5 backdrop-blur-md sm:p-8">
+          <div class="flex flex-wrap items-end justify-between gap-4">
+            <div>
+              <p class="text-xs font-extrabold uppercase tracking-[0.28em] text-fur">How to Buy</p>
+              <h2 class="mt-2 font-display text-4xl text-cream sm:text-5xl">Grab $BOARDCAT on Solana</h2>
+              <p class="mt-2 max-w-2xl font-bold text-cream/75">
+                Four steps from an empty wallet to a seat on the keyboard. You pay with SOL.
+              </p>
+            </div>
+            <a
+              href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=TBA"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="rounded-2xl bg-fur px-5 py-3 font-display text-xl text-ink shadow-fur transition hover:-translate-y-0.5"
+              >Buy Now</a
+            >
+          </div>
+
+          <ol class="mt-8 grid gap-4 md:grid-cols-4">
+            <li class="rounded-3xl border border-white/10 bg-white/5 p-5">
+              <span class="grid h-12 w-12 place-items-center rounded-full bg-cap font-display text-2xl text-ink"
+                >1</span
+              >
+              <h3 class="mt-4 font-display text-2xl text-cream">Spin up a wallet</h3>
+              <p class="mt-2 text-sm font-bold leading-relaxed text-cream/75">
+                Install Phantom or Solflare, create a Solana wallet, and store the recovery phrase
+                somewhere only you can reach.
+              </p>
+            </li>
+            <li class="rounded-3xl border border-white/10 bg-white/5 p-5">
+              <span class="grid h-12 w-12 place-items-center rounded-full bg-fur font-display text-2xl text-ink"
+                >2</span
+              >
+              <h3 class="mt-4 font-display text-2xl text-cream">Fuel it with SOL</h3>
+              <p class="mt-2 text-sm font-bold leading-relaxed text-cream/75">
+                Buy SOL and send it to your wallet. SOL is what you swap, and it also covers the
+                network fee.
+              </p>
+            </li>
+            <li class="rounded-3xl border border-white/10 bg-white/5 p-5">
+              <span class="grid h-12 w-12 place-items-center rounded-full bg-limeglow font-display text-2xl text-ink"
+                >3</span
+              >
+              <h3 class="mt-4 font-display text-2xl text-cream">Open the swap</h3>
+              <p class="mt-2 text-sm font-bold leading-relaxed text-cream/75">
+                Hit Buy Now. Pump.fun opens with SOL in and $BOARDCAT out. You can also paste the
+                contract address yourself.
+              </p>
+            </li>
+            <li class="rounded-3xl border border-white/10 bg-white/5 p-5">
+              <span class="grid h-12 w-12 place-items-center rounded-full bg-sky font-display text-2xl text-cream"
+                >4</span
+              >
+              <h3 class="mt-4 font-display text-2xl text-cream">Confirm and board</h3>
+              <p class="mt-2 text-sm font-bold leading-relaxed text-cream/75">
+                Choose how much SOL to spend, approve the transaction in your wallet, and
+                $BOARDCAT lands in your bag.
+              </p>
+            </li>
+          </ol>
+
+          <div
+            class="mt-6 flex flex-col gap-3 rounded-2xl border border-dashed border-cap/40 bg-black/25 p-4 sm:flex-row sm:items-center sm:justify-between"
+          >
+            <p class="font-bold text-cream/80">
+              Contract:
+              <span class="ml-2 font-mono text-limeglow">TBA</span>
+            </p>
+            <button
+              type="button"
+              data-copy
+              class="rounded-xl bg-cap px-4 py-2 font-display text-lg text-ink transition hover:bg-limeglow"
+            >
+              Copy CA
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section id="chart" class="px-4 pb-20">
+        <div class="mx-auto max-w-6xl">
+          <div class="flex flex-wrap items-end justify-between gap-4">
+            <div>
+              <p class="text-xs font-extrabold uppercase tracking-[0.28em] text-sky">Live chart</p>
+              <h2 class="mt-2 font-display text-4xl text-cream sm:text-5xl">Watch the board</h2>
+            </div>
+            <a
+              href="https://dexscreener.com/solana/TBA"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="rounded-2xl border-2 border-limeglow px-5 py-3 font-display text-xl text-limeglow transition hover:bg-limeglow hover:text-ink"
+              >Chart</a
+            >
+          </div>
+
+          <div class="mt-6 overflow-hidden rounded-[1.8rem] border border-white/15 bg-ink/80 shadow-cap">
+            <iframe
+              title="Dexscreener chart for BOARDCAT"
+              src="https://dexscreener.com/solana/TBA?embed=1&theme=dark&trades=0&info=0"
+              class="h-[460px] w-full bg-[#0b1220] md:h-[560px]"
+              loading="lazy"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-white/10 bg-ink/80 px-4 py-10 backdrop-blur-md">
+      <div class="mx-auto flex max-w-6xl flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
+        <div class="flex items-center gap-3">
+          <img src="logo.png" alt="" class="h-12 w-12 rounded-2xl object-cover ring-2 ring-fur/70" />
+          <div>
+            <p class="font-display text-2xl text-cream">Cat on Board</p>
+            <p class="text-sm font-extrabold uppercase tracking-[0.18em] text-limeglow">$BOARDCAT</p>
+          </div>
+        </div>
+        <div class="flex flex-wrap items-center gap-3">
+          <a
+            href="https://t.me/BOARDCAT"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="font-extrabold text-cream/80 transition hover:text-limeglow"
+            >Telegram</a
+          >
+          <a
+            href="https://x.com/CatonBoardX"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="font-extrabold text-cream/80 transition hover:text-fur"
+            >X</a
+          >
+          <a
+            href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=TBA"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="font-extrabold text-cream/80 transition hover:text-fur"
+            >Buy Now</a
+          >
+          <a
+            href="https://dexscreener.com/solana/TBA"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="font-extrabold text-cream/80 transition hover:text-limeglow"
+            >Chart</a
+          >
+        </div>
+      </div>
+      <p class="mx-auto mt-6 max-w-6xl text-sm font-bold text-cream/50">
+        Cat on Board brings captain-level cat energy, wild meme adventures, and unstoppable Solana
+        vibes aboard the blockchain. Meme coin. Do your own research.
+      </p>
+    </footer>
+
+    <div
+      id="toast"
+      role="status"
+      class="pointer-events-none fixed bottom-6 left-1/2 z-[70] -translate-x-1/2 translate-y-6 rounded-full bg-cap px-5 py-2 font-display text-lg text-ink opacity-0 transition duration-300"
+    >
+      CA copied
+    </div>
+
+    <script>
+      const CA = "TBA";
+
+      function copyText(value) {
+        if (navigator.clipboard && window.isSecureContext) {
+          return navigator.clipboard.writeText(value);
+        }
+        const field = document.createElement("textarea");
+        field.value = value;
+        field.setAttribute("readonly", "");
+        field.style.position = "fixed";
+        field.style.left = "-9999px";
+        document.body.appendChild(field);
+        field.select();
+        document.execCommand("copy");
+        field.remove();
+        return Promise.resolve();
+      }
+
+      function showToast() {
+        const toast = document.getElementById("toast");
+        toast.classList.remove("translate-y-6", "opacity-0");
+        toast.classList.add("translate-y-0", "opacity-100");
+        window.clearTimeout(showToast.timer);
+        showToast.timer = window.setTimeout(() => {
+          toast.classList.add("translate-y-6", "opacity-0");
+          toast.classList.remove("translate-y-0", "opacity-100");
+        }, 1600);
+      }
+
+      document.querySelectorAll("[data-copy]").forEach((button) => {
+        button.addEventListener("click", () => {
+          copyText(CA).then(showToast);
+        });
+      });
+    </script>
+  </body>
+</html>
